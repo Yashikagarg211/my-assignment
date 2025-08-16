@@ -13,7 +13,7 @@
     "build-storybook": "storybook build",
     "test": "vitest",
     "test:storybook": "vitest --browser",
-    "deploy-storybook": "chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "deploy-storybook": "npx chromatic --project-token=chpt_2ad89139ff8688b"
   },
   "dependencies": {
     "react": "^18.2.0",
