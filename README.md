@@ -1,69 +1,64 @@
-# React + TypeScript + Vite
+# 🚀 My Assignment – UI Component Library & Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A pixel-perfect **React + TypeScript** project built with **Vite**, styled using **TailwindCSS**, documented in **Storybook**, and deployed to **Vercel** & **Chromatic**.  
+This project demonstrates reusable components (forms, tables, pagination, etc.) with professional theming and testing support.
 
-Currently, two official plugins are available:
+## ✨ Features
+- ⚡ **Vite + React 18 + TypeScript** – modern fast development setup
+- 🎨 **TailwindCSS** – utility-first styling with dark/light theme support
+- 📖 **Storybook 9** – interactive component explorer
+- 🌐 **Chromatic** – hosted Storybook for collaboration
+- ☁️ **Vercel Deployment** – production-ready frontend hosting
+- ✅ **Vitest + Playwright** – testing setup with jsdom & browser support
+- ♻️ **Reusable Components** – form inputs, data tables, pagination, etc.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Installation
+Clone the repo and install dependencies:
+bash
+<pre>
+git clone https://github.com/YOUR-USERNAME/my-assignment.git
+cd my-assignment
+npm install </pre>
 
-## Expanding the ESLint configuration
+🛠️ Development
+Start the local dev server:
+<pre>npm run dev </pre>
+Storybook for components:
+<pre>npm run storybook </pre>
+Run tests:
+<pre>npm run test </pre>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Deployment
+🔹 Vercel (Live App)
+The Vite app is deployed on Vercel.
+👉 View Live Demo (https://my-assignment-ivory.vercel.app/)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+🔹 Chromatic (Storybook Hosting)
+Storybook is published on Chromatic.
+👉 View Storybook (https://68a0cc44898593162ef823bd-aimbzkjnko.chromatic.com/?path=/docs/configure-your-project--docs)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+📂 Project Structure
+<pre>
+  assignment/
+├── src/
+│   ├── components/       # Reusable UI components
+│   │   ├── forms/        # Form components (TextInput, etc.)
+│   │   ├── data-display/ # DataTable, Pagination, SearchBar
+│   │   └── theme/        # Theme toggle, dark mode
+│   ├── App.tsx           # Demo page
+│   └── index.css         # Tailwind styles
+├── .storybook/           # Storybook config
+├── public/               # Static assets
+├── package.json
+├── vite.config.ts
+└── README.md
+</pre>
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🧪 Testing
+Run unit and browser tests with Vitest:
+<pre>npm run test
+npm run test:storybook</pre>
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🤝 Contributing
+Pull requests are welcome!
+If you’d like to improve the design, add components, or enhance tests, feel free to open an issue or PR.
